@@ -113,19 +113,51 @@ Toán tử gán:
 
 | Toán tử | Ý nghĩa | Ví dụ | Tương đương với |
 |--------|--------|-------|----------------|
-| `=`   | Gán giá trị bên phải dấu bằng cho biến bên trái | x = 5 | x = 5 |
-| `+=`  | Phép cộng và gán | x += 5 | x = x + 5 |
-| `-=`  | Phép trừ và gán | x -= 5 | x = x - 5 |
-| `*=`  | Phép nhân và gán | x *= 5 | x = x * 5 |
-| `/=`  | Phép chia và gán | x /= 2 | x = x / 2 |
-| `//=` | Phép chia lấy nguyên và gán | x //= 2 | x = x // 2 |
-| `%=`  | Phép chia lấy dư và gán | x %= 5 | x = x % 5 |
-| `**=` | Phép lũy thừa và gán | x **= 2 | x = x ** 2 |
+| `=`   | Gán giá trị bên phải dấu bằng cho biến bên trái | x = 1 | x = 1 |
+| `+=`  | Phép cộng và gán | x += 2 | x = x + 5 |
+| `-=`  | Phép trừ và gán | x -= 3 | x = x - 3 |
+| `*=`  | Phép nhân và gán | x *= 4 | x = x * 4 |
+| `/=`  | Phép chia và gán | x /= 5 | x = x / 5 |
+| `//=` | Phép chia lấy nguyên và gán | x //= 6 | x = x // 6 |
+| `%=`  | Phép chia lấy dư và gán | x %= 7 | x = x % 7 |
+| `**=` | Phép lũy thừa và gán | x **= 8 | x = x ** 8 |
 
 </div>
 
+Toán tử so sánh:
+
+<div align="center">
+
+| Toán tử | Ý nghĩa                  | Ví dụ | Kết quả |
+|--------|--------------------------|-------|--------|
+| `==`   | So sánh bằng             | 1 == 1 | True   |
+| `!=`   | So sánh không bằng       | 2 != 2 | False  |
+| `<`    | So sánh nhỏ hơn          | 3 < 4  | True   |
+| `<=`   | So sánh nhỏ hơn hoặc bằng| 2 <= 5 | True   |
+| `>`    | So sánh lớn hơn          | 3 > 5  | False  |
+| `>=`   | So sánh lớn hơn hoặc bằng| 4 >= 5 | False  |
+
+</div>
+
+Toán tử Logic
+
+<div align="center">
+
+| Toán tử | Ý nghĩa | Ví dụ | Kết quả |
+|--------|--------|-------|--------|
+| `and` | Nếu điều kiện ở vế trái và vế phải của toán tử đều là TRUE thì kết quả là TRUE. Tất cả các trường hợp khác kết quả là FALSE | 5 > 4 and 5 < 6 | True |
+| `and` | | 5 > 4 and 5 >= 6 | False |
+| `or` | Nếu điều kiện ở vế trái và vế phải của toán tử đều là FALSE thì kết quả là FALSE. Tất cả các trường hợp còn lại TRUE | 5 > 5 or 5 >= 6 | False |
+| `or` | | 4 < 5 or 5 == 6 | True |
+| `not` | Đảo ngược trạng thái logic của toán hạng | not (5 > 4) | False |
+| `not` | | not (5 < 4) | True |
+
+</div>
 
 3. Câu lệnh điều kiện (if, elif,else,try,except)
+
+
+
 4. Vòng lặp (for, while)
 5. Hàm (def)
 6. Cấu trúc dữ liệu (list,dictionaries,tuples, sets)
