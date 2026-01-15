@@ -154,13 +154,163 @@ Toán tử Logic
 
 </div>
 
-3. Câu lệnh điều kiện (if, elif,else,try,except)
+3. Câu lệnh điều kiện (if, elif,else)
+
+Câu lệnh điều kiện được sử dụng để kiểm tra một điều kiện logic và thực hiện các đoạn mã khác nhau dựa trên kết quả của điều kiện đó.
+
+* `if`: kiểm tra điều kiện. Nếu điều kiện đúng, thực thi khối lệnh bên trong.
+* `else`: được thực thi khi điều kiện của if là sai.
+* `elif` (nếu có): kiểm tra điều kiện bổ sung khi điều kiện ban đầu không đúng.
 
 
 
+```python
+has_ticket = True
+age = 15
+
+if has_ticket:
+    if age >= 18:
+        print("Enjoy the movie!")
+    else:
+        print("Need adult supervision")
+else:
+    print("Buy a ticket first")
+
+# Output :Need adult supervision
+```
+    
 4. Vòng lặp (for, while)
+
+Vòng lặp cho phép bạn lặp lại mã mà không cần viết lại nhiều lần. Thay vì sao chép và dán, bạn chỉ cần yêu cầu Python lặp lại mã cho bạn.
+
+Vòng lặp `for` được sử dụng để lặp qua một danh sách hay bộ dữ liệu, tập hợp hoặc chuỗi kí tự
+
+```python
+for i in range(2):
+    print("Hello!")
+
+# Output:
+# Hello!
+# Hello!
+
+colors = ["red", "blue", "green"]
+for color in colors:
+    print(f"I like {color}")
+
+# Output:
+# I like red
+# I like blue
+# I like green
+
+name = "Python"
+for letter in name:
+    print(letter)
+
+# Output:
+# P
+# y
+# t
+# h
+# o
+# n
+```
+
+Vòng lặp `while` thực thi một tập hợp các câu lệnh miễn là điều kiện của nó vẫn đúng
+
+```python
+count = 0
+while count < 5:
+    print(f"Count is {count}")
+    count = count + 1 
+
+# Output:
+# Count is 0
+# Count is 1
+# Count is 2
+# Count is 3
+# Count is 4
+```
+
 5. Hàm (def)
+
+Hàm là một khối mã chỉ được thực thi khi được gọi. Một hàm có thể trả về dữ liệu như một kết quả.
+
+Ví dụ:
+```python
+def my_function():
+  print("Hello from a function")
+
+my_function()    
+#Output: Hello from a function
+```
+
+```python
+def countdown(n):
+  if n <= 0:
+    print("Done!")
+  else:
+    print(n)
+    countdown(n - 1)
+
+countdown(5)
+```
+
 6. Cấu trúc dữ liệu (list,dictionaries,tuples, sets)
+
+*  `List` là cấu trúc dữ liệu linh hoạt nhất của Python được sử dụng để lưu trữ các tập hợp có thứ tự cụ thể.
+
+```python
+# Empty list
+my_list = []
+
+# List with items
+fruits = ["apple", "banana", "orange"]
+numbers = [1, 2, 3, 4, 5]
+mixed = ["hello", 42, True, 3.14]  # Different types OK!
+```
+
+Các phương thức của List trong Python:
+
+| Phương thức | Mô tả |
+|------------|------|
+| `append(item)` | Thêm phần tử vào cuối danh sách |
+| `insert(index, item)` | Chèn phần tử vào vị trí `index` |
+| `extend(iterable)` | Mở rộng danh sách bằng các phần tử từ iterable khác |
+| `remove(item)` | Xóa lần xuất hiện đầu tiên của `item` |
+| `pop(index)` | Xóa và trả về phần tử tại vị trí `index` (mặc định là phần tử cuối) |
+| `clear()` | Xóa toàn bộ phần tử trong danh sách |
+| `sort()` | Sắp xếp tăng dần (hoặc giảm dần nếu `reverse=True`) |
+| `reverse()` | Đảo ngược thứ tự các phần tử |
+| `copy()` | Tạo bản sao nông (shallow copy) của danh sách |
+| `count(item)` | Đếm số lần xuất hiện của `item` |
+| `index(item)` | Tìm vị trí (index) xuất hiện đầu tiên của `item` |
+
+Ví dụ:
+
+```python
+# Khởi tạo list
+lst = [1, 2, 3]
+
+# append
+lst.append(4)               #[1, 2, 3, 4]
+lst.insert(1, 99)           #[1, 99, 2, 3, 4]
+lst.extend([5, 6])          #[1, 99, 2, 3, 4, 5, 6]
+lst.remove(99)              #[1, 2, 3, 4, 5, 6]
+x = lst.pop()               #x = 6, lst = [1, 2, 3, 4, 5]
+lst.clear()                 #lst = []
+
+lst = [4, 1, 3, 2]          
+lst.sort()                  #[1, 2, 3, 4]
+lst.sort(reverse=True)      #[4, 3, 2, 1]
+
+lst = [1, 2, 3]         
+lst.reverse()               #[3, 2, 1] 
+lst2 = lst.copy()           #lst=[3, 2, 1], lst2=[3, 2, 1]
+```
+
+* Dictionaries lưu trữ dữ liệu đưới dạng cặp khóa - giá trị. Hãy tưởng tượng chúng giống như một cuốn từ điển thực sự, nơi bạn tra cứu một từ (khóa) để tìm định nghĩa của nó (giá trị).
+
+
 7. Làm việc với file (opening, reading, writing)
 
 ### 5.3. Các thư viện cần thiết dành cho trí tuệ nhân tạo
