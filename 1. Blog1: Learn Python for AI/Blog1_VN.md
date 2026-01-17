@@ -16,6 +16,8 @@ Do đó, điều kiện tiên quyết để máy tính có thể “học” là
 
 Như vậy, AI không “hiểu” dữ liệu theo nghĩa ngữ nghĩa của con người, mà vận hành thông qua việc tối ưu các mô hình toán học trên những cấu trúc dữ liệu số hóa.
 
+![Alt text](image1.1.png)
+
 ### 1.2. Python trong vai trò ngôn ngữ trung gian
 1. Đặc điểm ngôn ngữ và khả năng tiếp cận
 
