@@ -1,4 +1,4 @@
-# Học Python cho AI  
+# Learn Python for AI
 *Từ ngôn ngữ lập trình đến trí tuệ nhân tạo*
 
 ---
