@@ -2,10 +2,10 @@
 *Từ ngôn ngữ lập trình đến trí tuệ nhân tạo*
 
 ---
-**Chủ đề:** Python cho Trí tuệ Nhân tạo  
-**Đối tượng:** Người mới học AI / Data / ML  
-**Thời gian đọc:** ~30–40 phút  
-**Mục tiêu:** Hiểu vai trò của Python trong hệ sinh thái AI
+**Chủ đề:** Python cho Trí tuệ Nhân tạo.  
+**Đối tượng:** Người mới học AI / Data / ML.  
+**Thời gian đọc:** ~30–40 phút.  
+**Mục tiêu:** Hiểu vai trò của Python trong hệ sinh thái AI.
 
 ## 1. Lý do học Python cho việc học AI
 Trí tuệ nhân tạo (Artificial Intelligence – AI) thường được nhìn nhận như một công nghệ mang tính đột phá, thậm chí vượt ra ngoài khả năng kiểm soát của con người. Tuy nhiên, từ góc độ khoa học, AI không phải là một thực thể siêu hình mà là kết quả của sự kết hợp giữa toán học, khoa học máy tính và dữ liệu nhằm mô phỏng một phần năng lực nhận thức của con người.
@@ -249,7 +249,7 @@ Toán tử so sánh:
 
 </div>
 
-Toán tử Logic
+Toán tử Logic:
 
 
 |A|B|A AND B|
@@ -309,7 +309,8 @@ else:
 
 Vòng lặp cho phép bạn lặp lại mã mà không cần viết lại nhiều lần. Thay vì sao chép và dán, bạn chỉ cần yêu cầu Python lặp lại mã cho bạn.
 
-Vòng lặp `for` được sử dụng để lặp qua một danh sách hay bộ dữ liệu, tập hợp hoặc chuỗi kí tự
+Vòng lặp `for` được sử dụng để lặp qua một danh sách hay bộ dữ liệu, tập hợp hoặc chuỗi kí tự.
+
 
 ```python
 for i in range(2):
@@ -341,7 +342,7 @@ for letter in name:
 # n
 ```
 
-Vòng lặp `while` thực thi một tập hợp các câu lệnh miễn là điều kiện của nó vẫn đúng
+Vòng lặp `while` thực thi một tập hợp các câu lệnh miễn là điều kiện của nó vẫn đúng.
 
 ```python
 count = 0
@@ -467,22 +468,22 @@ data = {
 
 Đặc điểm
 
-- **Có thứ tự**: Các phần tử có vị trí xác định và luôn giữ nguyên thứ tự đó
+- **Có thứ tự**: Các phần tử có vị trí xác định và luôn giữ nguyên thứ tự đó.
 
-- **Bất biến**: Không thể thêm, xóa hoặc sửa phần tử sau khi tạo
+- **Bất biến**: Không thể thêm, xóa hoặc sửa phần tử sau khi tạo.
 
-- **Cho phép trùng lặp**: Có thể chứa các giá trị trùng nhau
+- **Cho phép trùng lặp**: Có thể chứa các giá trị trùng nhau.
 
-- **Đa kiểu dữ liệu**: Có thể lưu trữ nhiều kiểu dữ liệu khác nhau trong cùng một tuple
+- **Đa kiểu dữ liệu**: Có thể lưu trữ nhiều kiểu dữ liệu khác nhau trong cùng một tuple.
 
-- **Cú pháp**: Được tạo bằng dấu ngoặc tròn `()`
+- **Cú pháp**: Được tạo bằng dấu ngoặc tròn `()`.
 
-Trường hợp sử dụng
+Trường hợp sử dụng:
 
-- Phù hợp với dữ liệu **không nên thay đổi**
-- Dùng để **trả về nhiều giá trị** từ một hàm
-- Sử dụng làm **key của dictionary** (vì tuple là bất biến)
-- Biểu diễn **tọa độ** hoặc các **cấu trúc dữ liệu cố định**
+- Phù hợp với dữ liệu **không nên thay đổi**.
+- Dùng để **trả về nhiều giá trị** từ một hàm.
+- Sử dụng làm **key của dictionary** (vì tuple là bất biến).
+- Biểu diễn **tọa độ** hoặc các **cấu trúc dữ liệu cố định**.
 
 Ví dụ:
 ```python
@@ -507,29 +508,29 @@ print(coordinates.index(20))  # Output: 1
 ```
 4. `Sets`
 
-`Set` – Tập hợp các phần tử duy nhất (Unique Collections)
+`Set` – Tập hợp các phần tử duy nhất (Unique Collections).
 
 Set là một tập hợp các phần tử **không có thứ tự** và **không trùng lặp**.  
 Set có thể thay đổi (mutable) và rất phù hợp cho các **phép toán tập hợp trong toán học**.
 
 Đặc điểm:
 
-- **Không có thứ tự**: Các phần tử không có vị trí cố định, thứ tự hiển thị có thể thay đổi
+- **Không có thứ tự**: Các phần tử không có vị trí cố định, thứ tự hiển thị có thể thay đổi.
 
-- **Có thể thay đổi**: Có thể thêm hoặc xóa phần tử sau khi tạo
+- **Có thể thay đổi**: Có thể thêm hoặc xóa phần tử sau khi tạo.
 
-- **Không cho phép trùng lặp**: Các giá trị trùng nhau sẽ tự động bị loại bỏ
+- **Không cho phép trùng lặp**: Các giá trị trùng nhau sẽ tự động bị loại bỏ.
 
-- **Kiểm tra tồn tại rất nhanh**: Thời gian trung bình là **O(1)**
+- **Kiểm tra tồn tại rất nhanh**: Thời gian trung bình là **O(1)**.
 
-- **Cú pháp**: Được tạo bằng dấu ngoặc nhọn `{}` hoặc hàm `set()`
+- **Cú pháp**: Được tạo bằng dấu ngoặc nhọn `{}` hoặc hàm `set()`.
 
 Trường hợp sử dụng:
 
-- Kiểm tra một phần tử có tồn tại trong tập hợp hay không
-- Loại bỏ các giá trị trùng lặp trong dữ liệu
-- Thực hiện các phép toán tập hợp (hợp, giao, hiệu)
-- Tìm các phần tử duy nhất
+- Kiểm tra một phần tử có tồn tại trong tập hợp hay không.
+- Loại bỏ các giá trị trùng lặp trong dữ liệu.
+- Thực hiện các phép toán tập hợp (hợp, giao, hiệu).
+- Tìm các phần tử duy nhất.
 
 Ví dụ:
 
@@ -590,8 +591,8 @@ AI có **cấu trúc phân tầng**, trong đó mỗi tầng được xây dựn
 - Ở tầng cao nhất, **TensorFlow** và **PyTorch** cung cấp khả năng **deep learning**, cho phép xây dựng mạng nơ-ron và các ứng dụng AI nâng cao.
 
 Hiểu rõ tiến trình của ngăn xếp này giúp bạn **học AI một cách có hệ thống**:
-- Nắm vững **nền tảng** trước
-- Sau đó mới chuyển sang các **thư viện phức tạp hơn**
+- Nắm vững **nền tảng** trước.
+- Sau đó mới chuyển sang các **thư viện phức tạp hơn**.
 
 Mỗi công cụ có **vai trò riêng** trong quy trình phát triển AI và bổ trợ lẫn nhau.
 
@@ -602,8 +603,7 @@ Mỗi công cụ có **vai trò riêng** trong quy trình phát triển AI và b
 
 ## 4. Kết luận  
 
-Python không chỉ đơn thuần là một ngôn ngữ lập trình được sử dụng trong AI.  
-Trong thực tế, Python đóng vai trò như **cầu nối giữa tư duy con người và khả năng tính toán của máy tính**.
+Python không chỉ đơn thuần là một ngôn ngữ lập trình được sử dụng trong AI. Trong thực tế, Python đóng vai trò như **cầu nối giữa tư duy con người và khả năng tính toán của máy tính**.
 
 Thông qua Python, những khái niệm trừu tượng như dữ liệu, mô hình, quy luật hay thuật toán được chuyển hóa thành các biểu diễn số mà máy có thể xử lý, học hỏi và tối ưu. Python không làm cho AI trở nên “thông minh” hơn về mặt bản chất, nhưng nó giúp con người **thiết kế, kiểm soát và hiểu được cách AI vận hành**.
 
