@@ -1,10 +1,16 @@
 # Learn Python for AI
+
 *From programming languages to artificial intelligence*
+
 ---
 **Topic:** Python for Artificial Intelligence
+
 **Target Audience:** AI / Data / ML Beginners
+
 **Reading Time:** ~30–40 minutes
+
 **Goal:** Understand the role of Python in the AI ecosystem
+
 ## 1. Reasons to learn Python for AI
 Artificial Intelligence (AI) is often perceived as a breakthrough technology, even moving beyond human control. However, from a scientific perspective, AI is not a metaphysical entity but the result of a combination of mathematics, computer science, and data to simulate a part of human cognitive capacity.
 To implement and control AI models, humans need a programming language to act as an intermediary between abstract thinking and computer processing capabilities. In this context, Python has become the widely chosen language in AI research and applications.
@@ -277,19 +283,14 @@ Logic Operators
 | 0 | 1 |
 | 1 | 0 |
 
-Toán tử Logic
 
 <div align="center">
-##Đoạn này chưa format lại, nhờ Hoàng Anh giúp nhénhé
 
 | Toán tử | Ý nghĩa | Ví dụ | Kết quả |
 |--------|--------|-------|--------|
-| `and` | Nếu điều kiện ở vế trái và vế phải của toán tử đều là TRUE thì kết quả là TRUE. Tất cả các trường hợp khác kết quả là FALSE | 5 > 4 and 5 < 6 | True |
-| `and` | | 5 > 4 and 5 >= 6 | False |
-| `or` | Nếu điều kiện ở vế trái và vế phải của toán tử đều là FALSE thì kết quả là FALSE. Tất cả các trường hợp còn lại TRUE | 5 > 5 or 5 >= 6 | False |
-| `or` | | 4 < 5 or 5 == 6 | True |
-| `not` | Đảo ngược trạng thái logic của toán hạng | not (5 > 4) | False |
-| `not` | | not (5 < 4) | True |
+| `and` | If both the left and right conditions are TRUE, the result is TRUE. All other cases are FALSE | 5 > 4 and 5 < 6 <br> <br> 5 > 4 and 5 >= 6 | True <br> <br> <br> <br>False|
+| `or` | If both the left and right conditions are FALSE, the result is FALSE. All other cases are TRUE | 5 > 5 or 5 >= 6 <br> <br> 4 < 5 or 5 == 6| False <br> <br> <br> True|
+| `not` | Reverses the logical state of the operand | not (5 > 4) <br> <br>not (5 < 4)| False <br> <br> <br> True|
 
 </div>
 
