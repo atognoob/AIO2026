@@ -1,0 +1,7 @@
+mac os
+python3 -m venv .venv
+source .venv/bin/activate
+
+
+win
+.venv\Scripts\activate
