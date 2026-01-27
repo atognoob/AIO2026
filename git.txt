@@ -5,3 +5,8 @@ source .venv/bin/activate
 
 win
 .venv\Scripts\activate
+
+
+git stash
+git pull
+git stash pop
