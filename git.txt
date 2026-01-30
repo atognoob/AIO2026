@@ -14,3 +14,4 @@ git stash pop
 
 git add .
 git commit -m "---"
+git push
