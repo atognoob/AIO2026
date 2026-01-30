@@ -6,11 +6,14 @@ source .venv/bin/activate
 win
 .venv\Scripts\activate
 
-
+#Luu tam thoi
 git stash
+#Update
 git pull
 git stash pop
 
 
 git add .
 git commit -m "---"
+git push
+
