@@ -173,12 +173,30 @@ Lặp lại nhiều lần (epochs) cho đến khi sai số không còn giảm đ
 
 ## 4. Hồi quy tuyến tính đa biến (Multiple Linear Regression)
 
-Trong thực tế, một kết quả thường bị chi phối bởi nhiều nguyên nhân. Do đó, ta mở rộng mô hình từ 1 biến $x$ thành $n$ biến đặc trưng $x_1, x_2, ..., x_n$.
+Trong thực tế, một kết quả thường bị chi phối bởi nhiều nguyên nhân. Do đó, ta mở rộng mô hình từ 1 biến $x$ thành nhiều biến đặc trưng.
 
-Phương trình tổng quát:
-$$y = w_0 + w_1x_1 + w_2x_2 + ... + w_nx_n + \epsilon$$
+### 4.1 Giải thích toán học (Dạng ma trận)
 
-### 4.1 Chuẩn bị dữ liệu
+Hồi quy tuyến tính đa biến với $p$ biến đầu vào có phương trình hồi quy cho từng điểm dữ liệu:
+$$ \hat{y}_i = w_0 + w_1 x_{i1} + \dots + w_p x_{ip} = \mathbf{w}^\top \mathbf{x}_i $$
+Trong đó $\mathbf{x}_i$ là véc-tơ đại diện cho quan sát thứ $i$: $(1, x_{i1}, \dots, x_{ip})$ (đã thêm số 1 ở đầu để tính $w_0$).
+
+**Biểu diễn cho toàn bộ tập dữ liệu:**
+Ký hiệu $\bar{\mathbf{X}}$ là ma trận mở rộng kích thước $n \times (p+1)$ (với $n$ là số quan sát).
+$$ \hat{\mathbf{y}} = \bar{\mathbf{X}}\mathbf{w} = \begin{bmatrix} 1 & x_{11} & \dots & x_{1p} \\ \vdots & \vdots & \ddots & \vdots \\ 1 & x_{n1} & \dots & x_{np} \end{bmatrix} \begin{bmatrix} w_0 \\ w_1 \\ \vdots \\ w_p \end{bmatrix} $$
+
+**Hàm mất mát (MSE):**
+Véc-tơ sai số $\mathbf{e} = \mathbf{y} - \hat{\mathbf{y}}$.
+$$ \mathcal{L}(\mathbf{w}) = \frac{1}{2n} \sum_{i=1}^n (y_i - \hat{y}_i)^2 = \frac{1}{2n} ||\bar{\mathbf{X}}\mathbf{w} - \mathbf{y}||_2^2 = \frac{1}{2n} (\mathbf{y} - \bar{\mathbf{X}}\mathbf{w})^\top (\mathbf{y} - \bar{\mathbf{X}}\mathbf{w}) $$
+
+**Đạo hàm và Nghiệm:**
+Đạo hàm theo $\mathbf{w}$:
+$$ \nabla \mathcal{L}(\mathbf{w}) = \frac{1}{n} \bar{\mathbf{X}}^\top (\bar{\mathbf{X}}\mathbf{w} - \mathbf{y}) $$
+
+Phương trình nghiệm đóng (Normal Equation):
+$$ \mathbf{w} = (\bar{\mathbf{X}}^\top \bar{\mathbf{X}})^{-1} \bar{\mathbf{X}}^\top \mathbf{y} $$
+
+### 4.2 Chuẩn bị dữ liệu
 
 Dựa trên phân tích mã nguồn từ notebook `linear_regression1.ipynb`, quy trình chuẩn bị dữ liệu được thực hiện như sau:
 
@@ -187,7 +205,7 @@ Dựa trên phân tích mã nguồn từ notebook `linear_regression1.ipynb`, qu
     *   Các cột dữ liệu không cần thiết hoặc chưa được xử lý mã hóa (`student_id`, `grade`, `pass_fail`, `parent_education_level`, `study_environment`) đã bị loại bỏ.
     *   Danh sách 12 đặc trưng được sử dụng: `previous_score`, `math_prev_score`, `science_prev_score`, `language_prev_score`, `daily_study_hours`, `attendance_percentage`, `homework_completion_rate`, `sleep_hours`, `screen_time_hours`, `physical_activity_minutes`, `motivation_score`, `exam_anxiety_score`.
 
-### 4.2 Tự triển khai Gradient Descent
+### 4.3 Tự triển khai Gradient Descent
 
 Trước khi sử dụng thư viện, chúng ta tự xây dựng hàm `linear_regression_gd` để hiểu rõ cơ chế hoạt động của thuật toán Gradient Descent với nhiều biến số.
   
@@ -199,7 +217,7 @@ Trước khi sử dụng thư viện, chúng ta tự xây dựng hàm `linear_re
     * **Cập nhật trọng số:** $w = w - \alpha \cdot \nabla w$
     * **Kiểm tra điều kiện dừng sớm (early stopping)** nếu sự thay đổi loss không đáng kể.
 
-### 4.3 Triển khai với Scikit-Learn
+### 4.4 Triển khai với Scikit-Learn
 
 Thay vì tự tính toán các đạo hàm phức tạp cho nhiều biến, ta sử dụng thư viện `scikit-learn` đã được tối ưu hóa cao.
 
