@@ -168,7 +168,7 @@ $w_1 = w_1 - \alpha \times D_{w1}$
 
 $w_0 = w_0 - \alpha \times D_{w0}$
 
-Lặp lại Bước 2 đến Bước 4 nhiều lần (epochs) cho đến khi sai số không còn giảm đáng kể.
+Lặp lại nhiều lần (epochs) cho đến khi sai số không còn giảm đáng kể.
 
 
 ## 4. Hồi quy tuyến tính đa biến (Multiple Linear Regression)
